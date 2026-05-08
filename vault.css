@@ -1,0 +1,18 @@
+input[type="text"], button {
+    width: 95vw;
+    margin: 4px;
+    text-align: center;
+}
+
+input[type="text"] {
+    font-size: xx-large;
+    padding: 16px;
+}
+
+
+button {
+    height: 100px;
+    border-radius: 50px;
+    font-size: x-large;
+    background-color: lightskyblue;
+}

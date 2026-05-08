@@ -8,18 +8,9 @@ body {
     align-items: center;
     margin: 4px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-input[type="text"], button {
-    width: 95vw;
-    margin: 4px;
     text-align: center;
 }
 
-input[type="text"] {
-    font-size: xx-large;
-    padding: 16px;
-}
 
 input:focus, button:focus {
     outline-color: lightgrey;
@@ -27,9 +18,6 @@ input:focus, button:focus {
     outline-width: 4px;
 }
 
-button {
-    height: 100px;
-    border-radius: 50px;
-    font-size: x-large;
-    background-color: lightskyblue;
+input[type="text"] {
+    padding: 4px;
 }

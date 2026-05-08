@@ -3,6 +3,7 @@
     <head>
         <title>Unwind Escape Room - Vault</title>
         <link rel="stylesheet" href="./globals.css">
+        <link rel="stylesheet" href="./vault.css">
     </head>
 
     <body>
@@ -12,17 +13,23 @@
         <button id="submitBtn" onclick="onSubmit()">Submit</button>
 
         <script>
-            const code = "1102345";
-            const bgColor = "#fff"
+            // Check if the specific item exists
+            var storedCode = localStorage.getItem("vaultCode");
+
+            if (storedCode === null) {
+                code = "69420";
+            } else {
+                code = storedCode;
+            }
+
+            const bgColor = "#fff";
             const textInput = document.querySelector("input");
             const body = document.querySelector("body");
 
             function onSubmit(){
                 if (textInput.value === code) {
-                    console.log("yay!");
                     flash("#0f0")
                 } else {
-                    console.log("aww...");
                     flash("#f00")
                 }
             }

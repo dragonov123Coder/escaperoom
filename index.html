@@ -7,6 +7,21 @@
 
     <body>
         <h1>Unwind Escape Room - Home</h1>
+        
         <a href="./vault.html">Vault</a>
+        <br>
+
+        <input type="text" placeholder="Tweak the vault code here...">
+
+        <script>
+            const input = document.querySelector("input");
+
+            input.addEventListener("keypress", (event) => {
+                if (event.key.toLowerCase() === "enter") {
+                    localStorage.setItem('vaultCode', input.value);
+                    alert("Code Updated!");
+                }
+            })
+        </script>
     </body>
 </html>
