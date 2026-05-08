@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Unwind Escape Room - Vault</title>
+        <link rel="stylesheet" href="./globals.css">
+    </head>
+
+    <body>
+        <h1><u>Enter code:</u></h1>
+        <input type="text" placeholder="Enter code here...">
+        <br>
+        <button id="submitBtn" onclick="onSubmit()">Submit</button>
+
+        <script>
+            const code = "1102345";
+            const bgColor = "#fff"
+            const textInput = document.querySelector("input");
+            const body = document.querySelector("body");
+
+            function onSubmit(){
+                if (textInput.value === code) {
+                    console.log("yay!");
+                    flash("#0f0")
+                } else {
+                    console.log("aww...");
+                    flash("#f00")
+                }
+            }
+
+            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+            async function flash(color, time=300) {
+                for (let i=0; i<3; i++) {
+                    body.style.backgroundColor = color;
+                    await sleep(time);
+                    body.style.backgroundColor = bgColor;
+                    await sleep(time);
+                }
+            }
+        </script>
+    </body>
+</html>
